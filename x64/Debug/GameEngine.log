@@ -1,0 +1,26 @@
+﻿  Render.cpp
+C:\Users\zigav\OneDrive\Dokumenti\GitHub\MooldEffect2022\Simulation\Render.cpp(43,69): warning C4244: 'argument': conversion from 'LONG' to 'float', possible loss of data
+C:\Users\zigav\OneDrive\Dokumenti\GitHub\MooldEffect2022\Simulation\Render.cpp(43,44): warning C4244: 'argument': conversion from 'LONG' to 'float', possible loss of data
+C:\Users\zigav\OneDrive\Dokumenti\GitHub\MooldEffect2022\Simulation\Render.cpp(72,101): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\zigav\OneDrive\Dokumenti\GitHub\MooldEffect2022\Simulation\Render.cpp(72,68): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\zigav\OneDrive\Dokumenti\GitHub\MooldEffect2022\Simulation\Render.cpp(76,220): warning C4267: 'argument': conversion from 'size_t' to 'unsigned char', possible loss of data
+C:\Users\zigav\OneDrive\Dokumenti\GitHub\MooldEffect2022\Simulation\Render.cpp(76,116): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\zigav\OneDrive\Dokumenti\GitHub\MooldEffect2022\Simulation\Render.cpp(76,84): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\zigav\OneDrive\Dokumenti\GitHub\MooldEffect2022\Simulation\Render.cpp(79,132): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\zigav\OneDrive\Dokumenti\GitHub\MooldEffect2022\Simulation\Render.cpp(79,75): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\zigav\OneDrive\Dokumenti\GitHub\MooldEffect2022\Simulation\Render.cpp(80,75): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\zigav\OneDrive\Dokumenti\GitHub\MooldEffect2022\Simulation\Render.cpp(81,129): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  Simulation.cpp
+C:\Users\zigav\OneDrive\Dokumenti\GitHub\MooldEffect2022\Simulation\Simulation.cpp(18,30): warning C4305: '+=': truncation from 'double' to 'float'
+C:\Users\zigav\OneDrive\Dokumenti\GitHub\MooldEffect2022\Simulation\Simulation.cpp(27,58): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Users\zigav\OneDrive\Dokumenti\GitHub\MooldEffect2022\Simulation\Simulation.cpp(32,20): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Users\zigav\OneDrive\Dokumenti\GitHub\MooldEffect2022\Simulation\Simulation.cpp(38,20): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Users\zigav\OneDrive\Dokumenti\GitHub\MooldEffect2022\Simulation\Simulation.cpp(45,24): warning C4244: 'return': conversion from 'const _Ty' to 'float', possible loss of data
+          with
+          [
+              _Ty=double
+          ]
+C:\Users\zigav\OneDrive\Dokumenti\GitHub\MooldEffect2022\Simulation\Simulation.cpp(50,65): warning C4305: 'return': truncation from 'double' to 'float'
+C:\Users\zigav\OneDrive\Dokumenti\GitHub\MooldEffect2022\Simulation\Simulation.cpp(61,65): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+  Generating Code...
+  GameEngine.vcxproj -> C:\Users\zigav\OneDrive\Dokumenti\GitHub\MooldEffect2022\x64\Debug\GameEngine.exe

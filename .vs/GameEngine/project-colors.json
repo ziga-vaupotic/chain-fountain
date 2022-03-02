@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "eb86148d-1b2e-4d99-b4cb-af3520aaca6d": {
+      "ProjectGuid": "eb86148d-1b2e-4d99-b4cb-af3520aaca6d",
+      "DisplayName": "GameEngine",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
