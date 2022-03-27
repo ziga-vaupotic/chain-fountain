@@ -36,6 +36,9 @@
     <ClInclude Include="Utils\Vector2D.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Utils\ConfigSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameEngine.cpp">
@@ -50,6 +53,9 @@
     <ClCompile Include="Utils\Vector2D.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Utils\ConfigSystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="GameEngine.rc">
@@ -57,10 +63,10 @@
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="small.ico">
+    <Image Include="GameEngine.ico">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="GameEngine.ico">
+    <Image Include="..\..\..\..\Downloads\small.ico">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

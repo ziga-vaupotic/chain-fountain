@@ -17,7 +17,7 @@ namespace Simulation
     namespace Calls
     {
         void OnInit(LPDIRECT3DDEVICE9& m_pD3DDev, HWND& m_pHWND);
-        void OnPaint(LPDIRECT3DDEVICE9& m_pD3DDev);
+        void OnPaint(LPDIRECT3DDEVICE9& m_pD3DDev, float m_flPrevFPS);
     }
     namespace Render
     {

@@ -4,15 +4,15 @@
 #include <iostream>
 #include <d3d9.h>
 #include "Simulation/Render.h"
+#include "Utils/ConfigSystem.h"
 
-// include the Direct3D Library file
 #pragma comment (lib, "d3d9.lib")
 
 LPDIRECT3D9 m_pD3D;
 LPDIRECT3DDEVICE9 m_pD3DDev;
 
 
-void initD3D(HWND hWnd)
+void InitD3D(HWND hWnd)
 {
     m_pD3D = Direct3DCreate9(D3D_SDK_VERSION);
 
@@ -40,13 +40,14 @@ void cleanD3D(void)
 
 
 
-
+static clock_t m_flCurrentTicks, m_flDeltaTicks;
+static float m_flFPS = 0;
 
 LRESULT CALLBACK WndProc(HWND, UINT, WPARAM, LPARAM);
 
 INT WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, PSTR, INT iCmdShow)
 {
-    HWND                hWnd;
+    HWND                m_pHWND;
     MSG                 msg;
     WNDCLASS            wndClass;
     wndClass.style = CS_HREDRAW | CS_VREDRAW;
@@ -58,27 +59,28 @@ INT WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, PSTR, INT iCmdShow)
     wndClass.hCursor = LoadCursor(NULL, IDC_ARROW);
     wndClass.hbrBackground = (HBRUSH)GetStockObject(WHITE_BRUSH);
     wndClass.lpszMenuName = NULL;
-    wndClass.lpszClassName = TEXT("Nigga");
+    wndClass.lpszClassName = TEXT("Simulation");
 
     RegisterClass(&wndClass);
 
-    hWnd = CreateWindow(
-        TEXT("Nigga"),   // window class name
-        TEXT("Nigga Simulation"),  // window caption
-        WS_OVERLAPPEDWINDOW,      // window style
-        CW_USEDEFAULT,            // initial x position
-        CW_USEDEFAULT,            // initial y position
-        CW_USEDEFAULT,            // initial x size
-        CW_USEDEFAULT,            // initial y size
-        NULL,                     // parent window handle
-        NULL,                     // window menu handle
-        hInstance,                // program instance handle
-        NULL);                    // creation parameters
+    m_pHWND = CreateWindow(
+        TEXT("Simulation"),
+        TEXT("Chain Fountain Effect Simulation"),  
+        WS_OVERLAPPEDWINDOW,    
+        CW_USEDEFAULT,          
+        CW_USEDEFAULT,            
+        CW_USEDEFAULT,         
+        CW_USEDEFAULT,            
+        NULL,                
+        NULL,         
+        hInstance,              
+        NULL);                 
 
-    ShowWindow(hWnd, iCmdShow);
-    initD3D(hWnd);
-    Simulation::Calls::OnInit(m_pD3DDev, hWnd);
-    UpdateWindow(hWnd);
+    ShowWindow(m_pHWND, iCmdShow);
+    InitD3D(m_pHWND);
+    Simulation::Calls::OnInit(m_pD3DDev, m_pHWND);
+    ConfigSystem::Init();
+    UpdateWindow(m_pHWND);
 
     while (GetMessage(&msg, NULL, 0, 0))
     {
@@ -87,7 +89,7 @@ INT WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, PSTR, INT iCmdShow)
     }
 
     return msg.wParam;
-}  // WinMain
+}
 
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message,
     WPARAM wParam, LPARAM lParam)
@@ -104,7 +106,17 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message,
         freopen("conout$", "w", stderr);
         return 0;
     case WM_PAINT:
-        Simulation::Calls::OnPaint(m_pD3DDev);
+        m_flCurrentTicks = clock();
+        Simulation::Calls::OnPaint(m_pD3DDev, m_flFPS);
+
+        m_flDeltaTicks = clock() - m_flCurrentTicks;
+        if (m_flDeltaTicks > 0)
+        {
+            m_flFPS = (float)CLOCKS_PER_SEC / m_flDeltaTicks;
+        }
+
+        std::cout << "FPS: " << m_flFPS << std::endl;
+
         return 0;
     case WM_DESTROY:
         PostQuitMessage(0);

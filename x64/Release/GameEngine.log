@@ -3,10 +3,17 @@ C:\Users\zigav\source\repos\GameEngine\GameEngine\Simulation\Render.h(6,10): fat
   Render.cpp
 C:\Users\zigav\source\repos\GameEngine\GameEngine\Simulation\Render.h(6,10): fatal error C1083: Cannot open include file: 'd3dx9.h': No such file or directory
   Simulation.cpp
-C:\Users\zigav\source\repos\GameEngine\GameEngine\Simulation\Simulation.h(11,16): error C7525: inline variables require at least '/std:c++17'
-C:\Users\zigav\source\repos\GameEngine\GameEngine\Simulation\Simulation.cpp(16,32): warning C4305: '+=': truncation from 'double' to 'float'
-C:\Users\zigav\source\repos\GameEngine\GameEngine\Simulation\Simulation.cpp(34,45): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
-C:\Users\zigav\source\repos\GameEngine\GameEngine\Simulation\Simulation.cpp(39,20): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
-C:\Users\zigav\source\repos\GameEngine\GameEngine\Simulation\Simulation.cpp(45,20): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
-C:\Users\zigav\source\repos\GameEngine\GameEngine\Simulation\Simulation.cpp(50,21): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
-C:\Users\zigav\source\repos\GameEngine\GameEngine\Simulation\Simulation.cpp(56,65): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Users\zigav\source\repos\GameEngine\GameEngine\Simulation\Simulation.h(24,16): error C7525: inline variables require at least '/std:c++17'
+C:\Users\zigav\source\repos\GameEngine\GameEngine\Simulation\Simulation.h(25,29): error C7525: inline variables require at least '/std:c++17'
+C:\Users\zigav\source\repos\GameEngine\GameEngine\Simulation\Simulation.cpp(18,30): warning C4305: '+=': truncation from 'double' to 'float'
+C:\Users\zigav\source\repos\GameEngine\GameEngine\Simulation\Simulation.cpp(27,58): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Users\zigav\source\repos\GameEngine\GameEngine\Simulation\Simulation.cpp(32,20): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Users\zigav\source\repos\GameEngine\GameEngine\Simulation\Simulation.cpp(38,20): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Users\zigav\source\repos\GameEngine\GameEngine\Simulation\Simulation.cpp(45,24): warning C4244: 'return': conversion from 'const _Ty' to 'float', possible loss of data
+          with
+          [
+              _Ty=double
+          ]
+C:\Users\zigav\source\repos\GameEngine\GameEngine\Simulation\Simulation.cpp(50,65): warning C4305: 'return': truncation from 'double' to 'float'
+C:\Users\zigav\source\repos\GameEngine\GameEngine\Simulation\Simulation.cpp(61,65): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+  Vector2D.cpp
