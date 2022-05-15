@@ -1,2 +1,6 @@
 # MooldEffect2022
- Simulation of moold effect based on the theory proposed by students at High school Jozeta Plečnika Ljubljana
+ In this thesis we investigated the phenomenon of the chain fountain. The core of the thesis is based on an already established theory, which will be explored and, if necessary, refined. Given the presupposed theory, we will try to prove the aformentioned phenomenon through various experiments. We will process the results collected from our tests and store them as data. The hypotheses we have set within our thesis will be confirmed or refuted by means of computer simulation. 
+
+In this study, we faced various physical and mathematical problems, that were a lot more difficult than we first presumed. In doing so, we have had to broaden our mathematical horizons into subjects that are not covered in our secondary school's curriculum, e.g. vector analysis.
+
+An important part of our work was devoted to the methodology of collecting data and doing research, as the phenomenon we chose for this thesis is wide-ranging. This means that during our expirements, we had to take into account the different variables and parameters that influence the process and consequently affect the results of the chain fountain. Therefore we have tried to use modern technology to measure the output parameters of the phenomenon as accurately as possible, since we would also like our research to have a practical application of the data collected.
